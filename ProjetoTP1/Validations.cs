@@ -10,7 +10,7 @@ namespace Projeto
     {
         public static bool ValidateUsername (List<User> users, string username)
         {
-            if (users.Find(x => x.Username == user) == null)
+            if (users.Find(x => x.Username == username) == null)
                 return false;
             return true;
         }
