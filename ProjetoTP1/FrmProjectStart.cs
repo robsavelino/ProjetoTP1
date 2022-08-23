@@ -8,12 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoTP1;
+using Projeto;
 
 namespace FrmProjeto
 {
     public partial class FrmProjectStart : Form
     {
-        
+        public List<Store> Store { get; set; }
+        public List<User> Users { get; set; }
+
+        #region Adding Store Games and Users
+
+
+
+        #endregion
+
         public FrmProjectStart()
         {
             InitializeComponent();
