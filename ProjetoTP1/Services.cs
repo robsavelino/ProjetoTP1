@@ -28,17 +28,25 @@ namespace Projeto
         }
         public static void DeleteFriend(List<User> users, string username, string friend)
         {
+            
             if (!Validations.ValidateUsername(users, username))
             {
                 Console.WriteLine("User not found");
                 return;
             }
-            if (users.Find(x => x.Username == username).Friends.Contains(new User { Username = friend }) == false)
+            if (!Validations.ValidateUsername(users, friend))
+            {
+                Console.WriteLine("Friend not found as a user");
+                return;
+            }
+
+            var auxFriend = users.Find(x => x.Username == friend);
+            if (users.Find(x => x.Username == username).Friends.Contains(auxFriend) == false)
             {
                 Console.WriteLine($"The user {username} doesn't have {friend} as a friend");
                 return;
             }
-            users.Find(x => x.Username == username).Friends.Remove(new User { Username = friend });
+            users.Find(x => x.Username == username).Friends.Remove(auxFriend);
         }
         public static void AddFriend(List<User> users, string username, string friend)
         {
@@ -52,12 +60,12 @@ namespace Projeto
                 Console.WriteLine("Friend's username is not valid");
                 return;
             }
-            if (users.Find(x => x.Username == username).Friends.Contains(new User { Username = friend }) == true)
+            var auxFriend = users.Find(x => x.Username == friend);
+            if (users.Find(x => x.Username == username).Friends.Contains(auxFriend) == true)
             {
                 Console.WriteLine($"The user {username} already has {friend} as a friend");
                 return;
             }
-            var auxFriend = users.Find( x => x.Username == friend);
 
             users.Find(x => x.Username == username).Friends.Add(auxFriend);
 
