@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projeto;
 
 namespace Projeto
 {
@@ -97,6 +98,18 @@ namespace Projeto
             var auxFriend = users.Find(x => x.Username == friend);
 
             return auxUser.Library.Where(x => x.Equals(auxFriend.Library)).ToList();
+        }
+
+        public void AddGame(List<User> users, string username, List<Store> store, string game)
+        {
+            if (!Validations.ValidateHasGame(users, username, store, game))
+            {
+                return; 
+            }
+
+            var auxGame = store.Find(x => x.GameName == game);
+
+            users.Find(x => x.Username == username).Library.Add(auxGame);
         }
 
     }

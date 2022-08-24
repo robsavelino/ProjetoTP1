@@ -14,5 +14,30 @@ namespace Projeto
                 return false;
             return true;
         }
+
+        public static bool ValidateHasGame (List<User> users, string username, List<Store> store, string game)
+        {
+            if (!ValidateUsername(users, username))
+                return false;
+            if(!ValidateGame(store, game))
+                return false;
+
+            var auxUser = users.Find(x => x.Username == username).Library.ToList();
+            var auxGame = store.Find(x => x.GameName == game);
+
+            if (auxUser.Contains(auxGame))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public static bool ValidateGame(List<Store> store, string game)
+        {
+            if (store.Find(x => x.GameName == game) == null)
+                return false;
+            return true; 
+        }
     }
 }
