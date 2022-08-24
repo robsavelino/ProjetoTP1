@@ -17,11 +17,6 @@ namespace FrmProjeto
         public List<Store> Store { get; set; }
         public List<User> Users { get; set; }
 
-        #region Adding Store Games and Users
-
-
-
-        #endregion
 
         public FrmProjectStart()
         {
@@ -30,7 +25,8 @@ namespace FrmProjeto
 
         private void FrmProjectStart_Load(object sender, EventArgs e)
         {
-
+            Inserts.StartStore(Store);
+            Inserts.StartUsers(Users, Store);
         }
 
         private void btnReturn_Click(object sender, EventArgs e)

@@ -17,7 +17,6 @@ namespace Projeto
             }
             return users.Find(x => x.Username == username).Library;
         }
-
         public static List<User> GetFriendsList(List<User> users, string username)
         {
             if (!Validations.ValidateUsername(users, username))

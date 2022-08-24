@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projeto;
 
 namespace Projeto
 {
@@ -15,5 +16,18 @@ namespace Projeto
         public List<User> Friends { get; set; }
         public List<Store> Library { get; set; }
 
+        public User(int id_User, string username, string exibitionName, string wallet)
+        {
+            Id_User = id_User;
+            Username = username;
+            ExibitionName = exibitionName;
+            Wallet = Convert.ToDouble(wallet);
+        }
+
+        public override string ToString()
+        {
+            return ($"Id| {Id_User}| Username: {Username}| Exibition Name: {ExibitionName}| Wallet: {Wallet}|");
+        }
     }
+    
 }
