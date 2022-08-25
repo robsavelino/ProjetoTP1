@@ -16,8 +16,8 @@ namespace Projeto
         {
             InitializeComponent();
 
-            var listViewFullStore = new ListViewItem(store);
-            lsvStoreFull.Items.Add(listViewFullStore);
+            //var listViewFullStore = new ListViewItem(store);
+            //lsvStoreFull.Items.Add(listViewFullStore);
         }
 
         private void btnOpenStore_Click(object sender, EventArgs e)
