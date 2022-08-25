@@ -112,5 +112,26 @@ namespace Projeto
             users.Find(x => x.Username == username).Library.Add(auxGame);
         }
 
+        public string AddGameToStore(List<Store> store, string gameName, string price, string genre, string publisher)
+        {
+            if (!Validations.ValidateGame(store ,gameName) && Validations.ValidatePriceInput(price))
+            {
+                store.Add(new Store(store.Count() + 1, gameName, price, genre, publisher));
+                return $"O jogo {gameName} foi adicionado a loja!";
+            }
+
+            else if(Validations.ValidatePriceInput(price))
+            {
+                return "Por favor, digitar um valor válido no campo Preço";
+            }
+
+            return $"O jogo {gameName} já está presente na loja.";
+        }
+
+        public void RemoveGameFromStore(string gameName, List<Store> store)
+        {
+            store.RemoveAll(x => x.GameName == gameName);
+        }
+
     }
 }

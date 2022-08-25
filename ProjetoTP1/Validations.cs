@@ -39,5 +39,10 @@ namespace Projeto
                 return false;
             return true; 
         }
+
+        public static bool ValidatePriceInput (string price)
+        {
+            return decimal.TryParse(price, out _);
+        }
     }
 }
