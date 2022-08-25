@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUserScreen));
             this.btnGames = new System.Windows.Forms.Button();
             this.btnFriends = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,10 +62,12 @@
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = global::Projeto.Properties.Resources.DefaultUser;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = global::Projeto.Properties.Resources.DefaultUser;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(50, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(128, 134);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
