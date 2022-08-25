@@ -41,7 +41,7 @@ namespace FrmProjeto
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnGoToUsers_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace FrmProjeto
         private void btnGoToStore_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new FrmMenu();
+            var form = new FrmStore(Store, Users);
             form.Show();
         }
     }

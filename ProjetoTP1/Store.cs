@@ -22,5 +22,10 @@ namespace Projeto
             Genre = genre;
             Publisher = publisher;
         }
+
+        public override string ToString()
+        {
+            return $"Id: {Id_Game}, Name: {GameName}, Price: {Price}, Genre: {Genre}, Publisher: {Publisher}";
+        }
     }
 }
