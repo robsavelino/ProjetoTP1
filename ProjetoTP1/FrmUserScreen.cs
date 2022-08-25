@@ -12,12 +12,17 @@ namespace Projeto
 {
     public partial class FrmUserScreen : Form
     {
-        public FrmUserScreen(List<User> Users)
+        public FrmUserScreen(List<User> Users, List<Store> Store)
         {
             InitializeComponent();
         }
 
         private void FrmUserScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGames_Click(object sender, EventArgs e)
         {
 
         }

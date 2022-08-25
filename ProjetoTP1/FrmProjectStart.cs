@@ -47,7 +47,7 @@ namespace FrmProjeto
         private void btnGoToUsers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new FrmMenu();
+            var form = new FrmUserScreen(Users, Store);
             form.Show();
         }
 

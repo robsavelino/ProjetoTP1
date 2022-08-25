@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnGames = new System.Windows.Forms.Button();
-            this.BtnFriends = new System.Windows.Forms.Button();
+            this.btnGames = new System.Windows.Forms.Button();
+            this.btnFriends = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // BtnGames
+            // btnGames
             // 
-            this.BtnGames.Location = new System.Drawing.Point(523, 115);
-            this.BtnGames.Name = "BtnGames";
-            this.BtnGames.Size = new System.Drawing.Size(170, 44);
-            this.BtnGames.TabIndex = 0;
-            this.BtnGames.Text = "Jogos";
-            this.BtnGames.UseVisualStyleBackColor = true;
+            this.btnGames.Location = new System.Drawing.Point(523, 115);
+            this.btnGames.Name = "btnGames";
+            this.btnGames.Size = new System.Drawing.Size(170, 44);
+            this.btnGames.TabIndex = 0;
+            this.btnGames.Text = "Jogos";
+            this.btnGames.UseVisualStyleBackColor = true;
+            this.btnGames.Click += new System.EventHandler(this.btnGames_Click);
             // 
-            // BtnFriends
+            // btnFriends
             // 
-            this.BtnFriends.Location = new System.Drawing.Point(523, 250);
-            this.BtnFriends.Name = "BtnFriends";
-            this.BtnFriends.Size = new System.Drawing.Size(170, 44);
-            this.BtnFriends.TabIndex = 1;
-            this.BtnFriends.Text = "Amigos";
-            this.BtnFriends.UseVisualStyleBackColor = true;
+            this.btnFriends.Location = new System.Drawing.Point(523, 250);
+            this.btnFriends.Name = "btnFriends";
+            this.btnFriends.Size = new System.Drawing.Size(170, 44);
+            this.btnFriends.TabIndex = 1;
+            this.btnFriends.Text = "Amigos";
+            this.btnFriends.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -69,8 +70,8 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.BtnFriends);
-            this.Controls.Add(this.BtnGames);
+            this.Controls.Add(this.btnFriends);
+            this.Controls.Add(this.btnGames);
             this.Name = "FrmUserScreen";
             this.Text = "FrmUserScreen";
             this.Load += new System.EventHandler(this.FrmUserScreen_Load);
@@ -84,5 +85,7 @@
         private Button BtnGames;
         private Button BtnFriends;
         private PictureBox pictureBox1;
+        private Button btnGames;
+        private Button btnFriends;
     }
 }

@@ -13,7 +13,7 @@ namespace Projeto
         {
             if (!Validations.ValidateUsername(users, username))
             {
-                Console.WriteLine("User not found");
+                MessageBox.Show("User not found");
                 return null;
             }
             return users.Find(x => x.Username == username).Library;
@@ -22,7 +22,7 @@ namespace Projeto
         {
             if (!Validations.ValidateUsername(users, username))
             {
-                Console.WriteLine("User not found");
+                MessageBox.Show("User not found");
                 return null;
             }
             return users.Find(x => x.Username == username).Friends;
@@ -32,18 +32,18 @@ namespace Projeto
             
             if (!Validations.ValidateUsername(users, username))
             {
-                Console.WriteLine("User not found");
+                MessageBox.Show("User not found");
                 return;
             }
             if (!Validations.ValidateUsername(users, friend))
             {
-                Console.WriteLine("Friend not found as a user");
+                MessageBox.Show("Friend not found as a user");
                 return;
             }
             
             if (users.Find(x => x.Username == username).Friends.Contains(friend) == false)
             {
-                Console.WriteLine($"The user {username} doesn't have {friend} as a friend");
+                MessageBox.Show($"The user {username} doesn't have {friend} as a friend");
                 return;
             }
             users.Find(x => x.Username == username).Friends.Remove(friend);
@@ -52,18 +52,18 @@ namespace Projeto
         {
             if (!Validations.ValidateUsername(users, username))
             {
-                Console.WriteLine("User not found");
+                MessageBox.Show("User not found");
                 return;
             }
             if (!Validations.ValidateUsername(users, friend))
             {
-                Console.WriteLine("Friend's username is not valid");
+                MessageBox.Show("Friend's username is not valid");
                 return;
             }
             
             if (users.Find(x => x.Username == username).Friends.Contains(friend) == true)
             {
-                Console.WriteLine($"The user {username} already has {friend} as a friend");
+                MessageBox.Show($"The user {username} already has {friend} as a friend");
                 return;
             }
 
@@ -74,7 +74,7 @@ namespace Projeto
         {
             if (!Validations.ValidateUsername(users, username))
             {
-                Console.WriteLine("User not found");
+                MessageBox.Show("User not found");
                 return null;
             }
             var gamesUser = users.Find(x => x.Username == username).Library;
@@ -84,12 +84,12 @@ namespace Projeto
         {
             if (!Validations.ValidateUsername(users, username))
             {
-                Console.WriteLine("User not found");
+                MessageBox.Show("User not found");
                 return null;
             }
             if (!Validations.ValidateUsername(users, username))
             {
-                Console.WriteLine("Friend not found");
+                MessageBox.Show("Friend not found");
                 return null;
             }
 
@@ -117,7 +117,7 @@ namespace Projeto
                 return $"O jogo {gameName} foi adicionado a loja!";
             }
 
-            else if(Validations.ValidatePriceInput(price))
+            else if(!Validations.ValidatePriceInput(price))
             {
                 return "Por favor, digitar um valor válido no campo Preço";
             }
@@ -130,8 +130,13 @@ namespace Projeto
         }
         public Store SearchGameByName(List<Store> store, string gameName)
         {
+            if (!Validations.ValidateGame(store, gameName))
+            {
+                MessageBox.Show("Game not found");
+                return null;
+            }
             var matchGame = store.FirstOrDefault(x => x.GameName ==gameName);
-            return matchGame;//RELEMBRAR TRATAMENTO DO NULL NA QUESTÃO DO FORMS?
+            return matchGame;
         }
 
     }
