@@ -25,7 +25,7 @@ namespace Projeto
 
         public override string ToString()
         {
-            return $"Id: {}, Name: {GameName}, Price: {Price}, Genre: {Genre}, Publisher: {Publisher}";
+            return $"Id: {Id_Game}, Name: {GameName}, Price: {Price}, Genre: {Genre}, Publisher: {Publisher}";
         }
     }
 }

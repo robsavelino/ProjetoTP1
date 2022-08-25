@@ -30,7 +30,7 @@ namespace ProjetoTP1
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
     private void FrmMenu_Load(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace FrmProjeto
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnGoToUsers_Click(object sender, EventArgs e)
