@@ -25,7 +25,9 @@ namespace FrmProjeto
 
         private void FrmProjectStart_Load(object sender, EventArgs e)
         {
+            Store = new();
             Inserts.StartStore(Store);
+            Users = new();
             Inserts.StartUsers(Users, Store);
         }
 
@@ -40,6 +42,16 @@ namespace FrmProjeto
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGoToUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGoToStore_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

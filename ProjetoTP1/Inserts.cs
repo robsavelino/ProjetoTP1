@@ -11,22 +11,20 @@ namespace Projeto
     {
         public static void StartStore (List<Store> store)
         {
-            List<Store> Store = new List<Store>();
-            AddingGamesToStore(Store);
+            AddingGamesToStore(store);
         }
         public static void StartUsers (List<User> users, List<Store> store)
         {
-            List<User> Users = new List<User>();
-            List<User> Friends = new List<User>();
-            AddingUsers(Users);
-            AddingFriends(Users, Friends);
-            AddingLibrary(Users, store);
+
+            AddingUsers(users);
+            AddingFriends(users);
+            AddingLibrary(users, store);
         }
 
         public static void AddingUsers(List<User> Users)
         {
             Users.Add(new User(1, "lugan.thierry", "Wolve", "500,00"));
-            Users.Add(new User(2, "rob.avelino", "robs", "1000,50"));
+            Users.Add(new User(2, "robsavelino", "robs", "1000,50"));
             Users.Add(new User(3, "matheus.alencastro", "Matte", "950,45"));
             Users.Add(new User(4, "neymar.jr", "Menino do Hexa", "9999,99"));
             Users.Add(new User(5, "gabriel.jesus", "Homem Biscoito", "100,00"));
@@ -42,24 +40,25 @@ namespace Projeto
             Users.Add(new User(15, "rafaela.vilasboas", "Rafa", "3500,00"));
         }
 
-        public static void AddingFriends(List<User> Users, List<User> Friends)
+        public static void AddingFriends(List<User> Users)
         {
-            Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "matheus.alencastro"));
-            Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "robsavelino"));
-            Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "neymar.jr"));
-            Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "larissa.machado"));
-            Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "carlos.henrique"));
-            Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "maria.lurdes"));
-            Users.Find(x => x.Username == "robsavelino").Friends.Add(Users.Find(x => x.Username == "matheus.alencastro"));
-            Users.Find(x => x.Username == "robsavelino").Friends.Add(Users.Find(x => x.Username == "lugan.thierry"));
-            Users.Find(x => x.Username == "robsavelino").Friends.Add(Users.Find(x => x.Username == "neymar.jr"));
-            Users.Find(x => x.Username == "robsavelino").Friends.Add(Users.Find(x => x.Username == "carlos.henrique"));
-            Users.Find(x => x.Username == "robsavelino").Friends.Add(Users.Find(x => x.Username == "gabriel.jesus"));
-            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add(Users.Find(x => x.Username == "lugan.thierry"));
-            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add(Users.Find(x => x.Username == "robsavelino"));
-            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add(Users.Find(x => x.Username == "gabriel.jesus"));
-            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add(Users.Find(x => x.Username == "carlos.henrique"));
-            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add(Users.Find(x => x.Username == "miraildes.mota"));
+
+            Users.Find(x => x.Username == "lugan.thierry").Friends.Add("matheus.alencastro");
+            Users.Find(x => x.Username == "lugan.thierry").Friends.Add("robsavelino");
+            Users.Find(x => x.Username == "lugan.thierry").Friends.Add("neymar.jr");
+            Users.Find(x => x.Username == "lugan.thierry").Friends.Add("larissa.machado");
+            Users.Find(x => x.Username == "lugan.thierry").Friends.Add("carlos.henrique");
+            Users.Find(x => x.Username == "lugan.thierry").Friends.Add("maria.lurdes");
+            Users.Find(x => x.Username == "robsavelino").Friends.Add("matheus.alencastro");
+            Users.Find(x => x.Username == "robsavelino").Friends.Add("lugan.thierry");
+            Users.Find(x => x.Username == "robsavelino").Friends.Add( "neymar.jr");
+            Users.Find(x => x.Username == "robsavelino").Friends.Add("carlos.henrique");
+            Users.Find(x => x.Username == "robsavelino").Friends.Add("gabriel.jesus");
+            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("lugan.thierry");
+            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("robsavelino");
+            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("gabriel.jesus");
+            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("carlos.henrique");
+            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("miraildes.mota");
         }
 
         public static void AddingLibrary (List<User> Users, List<Store> Store)
