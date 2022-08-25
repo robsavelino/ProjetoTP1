@@ -9,20 +9,22 @@ namespace Projeto
 {
     public class Inserts
     {
-        public static void StartStore (List<Store> Store)
+        public static void StartStore (List<Store> store)
         {
+            List<Store> Store = new List<Store>();
             AddingGamesToStore(Store);
         }
-        public static void StartUsers (List<User> Users, List<Store> Store)
+        public static void StartUsers (List<User> users, List<Store> store)
         {
+            List<User> Users = new List<User>();
+            List<User> Friends = new List<User>();
             AddingUsers(Users);
-            AddingFriends(Users);
-            AddingLibrary(Users, Store);
+            AddingFriends(Users, Friends);
+            AddingLibrary(Users, store);
         }
 
         public static void AddingUsers(List<User> Users)
         {
-            Users.Clear();
             Users.Add(new User(1, "lugan.thierry", "Wolve", "500,00"));
             Users.Add(new User(2, "rob.avelino", "robs", "1000,50"));
             Users.Add(new User(3, "matheus.alencastro", "Matte", "950,45"));
@@ -40,7 +42,7 @@ namespace Projeto
             Users.Add(new User(15, "rafaela.vilasboas", "Rafa", "3500,00"));
         }
 
-        public static void AddingFriends(List<User> Users)
+        public static void AddingFriends(List<User> Users, List<User> Friends)
         {
             Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "matheus.alencastro"));
             Users.Find(x => x.Username == "lugan.thierry").Friends.Add(Users.Find(x => x.Username == "robsavelino"));
@@ -80,7 +82,6 @@ namespace Projeto
         }
         public static void AddingGamesToStore(List<Store> Store)
         {
-            Store.Clear();
             Store.Add(new Store(1, "GTA V", "89,90", "RPG", "Rockstar"));
             Store.Add(new Store(2, "Spider Man Remastered", "249,90", "Action", "Isomniac Games"));
             Store.Add(new Store(3, "Stray", "63,79", "Adventure", "BlueTwelve Studio"));

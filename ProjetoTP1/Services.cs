@@ -133,5 +133,11 @@ namespace Projeto
             store.RemoveAll(x => x.GameName == gameName);
         }
 
+        public Store SearchGameByName(List<Store> store, string gameName)
+        {
+            var matchGame = store.FirstOrDefault(x => x.GameName ==gameName);
+            return matchGame;//RELEMBRAR TRATAMENTO DO NULL NA QUESTÃO DO FORMS?
+        }
+
     }
 }
