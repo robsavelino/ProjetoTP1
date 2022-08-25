@@ -46,12 +46,16 @@ namespace FrmProjeto
 
         private void btnGoToUsers_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var form = new FrmMenu();
+            form.Show();
         }
 
         private void btnGoToStore_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var form = new FrmMenu();
+            form.Show();
         }
     }
 }
