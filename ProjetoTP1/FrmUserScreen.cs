@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FrmProjeto;
 
-namespace Projeto
+namespace Projeto 
 {
     public partial class FrmUserScreen : Form
     {
@@ -30,6 +31,9 @@ namespace Projeto
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            var form = new FrmProjectStart();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
