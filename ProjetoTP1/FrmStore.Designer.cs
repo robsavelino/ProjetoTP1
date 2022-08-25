@@ -38,7 +38,6 @@
             this.gamePrice = new System.Windows.Forms.ColumnHeader();
             this.gameGenre = new System.Windows.Forms.ColumnHeader();
             this.gamePublisher = new System.Windows.Forms.ColumnHeader();
-            this.idGame = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -91,14 +90,13 @@
             // lsvStoreFull
             // 
             this.lsvStoreFull.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.idGame,
             this.gameName,
             this.gamePrice,
             this.gameGenre,
             this.gamePublisher});
-            this.lsvStoreFull.Location = new System.Drawing.Point(233, 75);
+            this.lsvStoreFull.Location = new System.Drawing.Point(217, 75);
             this.lsvStoreFull.Name = "lsvStoreFull";
-            this.lsvStoreFull.Size = new System.Drawing.Size(403, 159);
+            this.lsvStoreFull.Size = new System.Drawing.Size(348, 273);
             this.lsvStoreFull.TabIndex = 5;
             this.lsvStoreFull.UseCompatibleStateImageBehavior = false;
             this.lsvStoreFull.View = System.Windows.Forms.View.Details;
@@ -121,10 +119,6 @@
             this.gamePublisher.Text = "Empresa";
             this.gamePublisher.Width = 100;
             // 
-            // idGame
-            // 
-            this.idGame.Text = "Game ID";
-            // 
             // FrmStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -139,6 +133,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "FrmStore";
             this.Text = "Store";
+            this.Load += new System.EventHandler(this.FrmStore_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +151,5 @@
         private ColumnHeader gamePrice;
         private ColumnHeader gameGenre;
         private ColumnHeader gamePublisher;
-        private ColumnHeader idGame;
     }
 }
