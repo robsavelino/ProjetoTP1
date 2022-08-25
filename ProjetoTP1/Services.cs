@@ -18,7 +18,7 @@ namespace Projeto
             }
             return users.Find(x => x.Username == username).Library;
         }
-        public static List<User> GetFriendsList(List<User> users, string username)
+        public static List<string> GetFriendsList(List<User> users, string username)
         {
             if (!Validations.ValidateUsername(users, username))
             {
@@ -40,14 +40,13 @@ namespace Projeto
                 Console.WriteLine("Friend not found as a user");
                 return;
             }
-
-            var auxFriend = users.Find(x => x.Username == friend);
-            if (users.Find(x => x.Username == username).Friends.Contains(auxFriend) == false)
+            
+            if (users.Find(x => x.Username == username).Friends.Contains(friend) == false)
             {
                 Console.WriteLine($"The user {username} doesn't have {friend} as a friend");
                 return;
             }
-            users.Find(x => x.Username == username).Friends.Remove(auxFriend);
+            users.Find(x => x.Username == username).Friends.Remove(friend);
         }
         public static void AddFriend(List<User> users, string username, string friend)
         {
@@ -61,14 +60,14 @@ namespace Projeto
                 Console.WriteLine("Friend's username is not valid");
                 return;
             }
-            var auxFriend = users.Find(x => x.Username == friend);
-            if (users.Find(x => x.Username == username).Friends.Contains(auxFriend) == true)
+            
+            if (users.Find(x => x.Username == username).Friends.Contains(friend) == true)
             {
                 Console.WriteLine($"The user {username} already has {friend} as a friend");
                 return;
             }
 
-            users.Find(x => x.Username == username).Friends.Add(auxFriend);
+            users.Find(x => x.Username == username).Friends.Add(friend);
 
         }
         public static List<Store> GamesToBuy (List <User> users, string username, List <Store> store)
@@ -99,7 +98,6 @@ namespace Projeto
 
             return auxUser.Library.Where(x => x.Equals(auxFriend.Library)).ToList();
         }
-
         public void AddGame(List<User> users, string username, List<Store> store, string game)
         {
             if (!Validations.ValidateHasGame(users, username, store, game))
@@ -111,7 +109,6 @@ namespace Projeto
 
             users.Find(x => x.Username == username).Library.Add(auxGame);
         }
-
         public string AddGameToStore(List<Store> store, string gameName, string price, string genre, string publisher)
         {
             if (!Validations.ValidateGame(store ,gameName) && Validations.ValidatePriceInput(price))
@@ -127,12 +124,10 @@ namespace Projeto
 
             return $"O jogo {gameName} já está presente na loja.";
         }
-
         public void RemoveGameFromStore(string gameName, List<Store> store)
         {
             store.RemoveAll(x => x.GameName == gameName);
         }
-
         public Store SearchGameByName(List<Store> store, string gameName)
         {
             var matchGame = store.FirstOrDefault(x => x.GameName ==gameName);

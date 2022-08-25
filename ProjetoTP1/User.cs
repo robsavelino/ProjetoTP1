@@ -13,7 +13,7 @@ namespace Projeto
         public string Username { get; set; }
         public string ExibitionName { get; set; }  
         public double Wallet { get; set; }
-        public List<User> Friends { get; set; }
+        public List<string> Friends { get; set; }
         public List<Store> Library { get; set; }
 
         public User(int id_User, string username, string exibitionName, string wallet)
@@ -22,6 +22,8 @@ namespace Projeto
             Username = username;
             ExibitionName = exibitionName;
             Wallet = Convert.ToDouble(wallet);
+            Friends = new();
+            Library = new();
         }
 
         public override string ToString()
