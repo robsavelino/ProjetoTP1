@@ -54,11 +54,26 @@ namespace Projeto
             Users.Find(x => x.Username == "robsavelino").Friends.Add( "neymar.jr");
             Users.Find(x => x.Username == "robsavelino").Friends.Add("carlos.henrique");
             Users.Find(x => x.Username == "robsavelino").Friends.Add("gabriel.jesus");
+            Users.Find(x => x.Username == "robsavelino").Friends.Add("joao.pedro");
             Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("lugan.thierry");
             Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("robsavelino");
+            Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("neymar.jr");
             Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("gabriel.jesus");
             Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("carlos.henrique");
             Users.Find(x => x.Username == "matheus.alencastro").Friends.Add("miraildes.mota");
+            Users.Find(x => x.Username == "joao.pedro").Friends.Add("carlos.henrique");
+            Users.Find(x => x.Username == "joao.pedro").Friends.Add("neymar.jr");
+            Users.Find(x => x.Username == "maria.lurdes").Friends.Add("carlos.henrique");
+            Users.Find(x => x.Username == "maria.lurdes").Friends.Add("neymar.jr");
+            Users.Find(x => x.Username == "carlos.henrique").Friends.Add("neymar.jr");
+            Users.Find(x => x.Username == "carlos.henrique").Friends.Add("gabriel.jesus");
+            Users.Find(x => x.Username == "carlos.henrique").Friends.Add("rob.avelino");
+            Users.Find(x => x.Username == "carlos.henrique").Friends.Add("lugan.thierry");
+            Users.Find(x => x.Username == "carlos.henrique").Friends.Add("matheus.alencastro");
+            Users.Find(x => x.Username == "neymar.jr").Friends.Add("larissa.machado");
+            Users.Find(x => x.Username == "neymar.jr").Friends.Add("carlos.henrique");
+            Users.Find(x => x.Username == "neymar.jr").Friends.Add("gabriel.jesus");
+            Users.Find(x => x.Username == "neymar.jr").Friends.Add("miraildes.mota");
         }
 
         public static void AddingLibrary (List<User> Users, List<Store> Store)
@@ -77,6 +92,31 @@ namespace Projeto
             Users.Find(x => x.Username == "matheus.alencastro").Library.Add(Store.Find(x => x.GameName == "Fifa 23"));
             Users.Find(x => x.Username == "matheus.alencastro").Library.Add(Store.Find(x => x.GameName == "GTA V"));
             Users.Find(x => x.Username == "matheus.alencastro").Library.Add(Store.Find(x => x.GameName == "Mortal Kombat 11"));
+            Users.Find(x => x.Username == "neymar.jr").Library.Add(Store.Find(x => x.GameName == "Counter Strike Global Offensive"));
+            Users.Find(x => x.Username == "neymar.jr").Library.Add(Store.Find(x => x.GameName == "Mortal Kombat 11"));
+            Users.Find(x => x.Username == "neymar.jr").Library.Add(Store.Find(x => x.GameName == "Fifa 23"));
+            Users.Find(x => x.Username == "neymar.jr").Library.Add(Store.Find(x => x.GameName == "Asseto Corsa"));
+            Users.Find(x => x.Username == "gabriel.jesus").Library.Add(Store.Find(x => x.GameName == "Fifa 23"));
+            Users.Find(x => x.Username == "gabriel.jesus").Library.Add(Store.Find(x => x.GameName == "Mortal Kombat 11"));
+            Users.Find(x => x.Username == "gabriel.jesus").Library.Add(Store.Find(x => x.GameName == "Spider Man Remastered"));
+            Users.Find(x => x.Username == "carlos.henrique").Library.Add(Store.Find(x => x.GameName == "GTA V"));
+            Users.Find(x => x.Username == "carlos.henrique").Library.Add(Store.Find(x => x.GameName == "Euro Truck Simulator 2"));
+            Users.Find(x => x.Username == "carlos.henrique").Library.Add(Store.Find(x => x.GameName == "God of War"));
+            Users.Find(x => x.Username == "carlos.henrique").Library.Add(Store.Find(x => x.GameName == "Garrys Mode"));
+            Users.Find(x => x.Username == "carlos.henrique").Library.Add(Store.Find(x => x.GameName == "Digimon Survive"));
+            Users.Find(x => x.Username == "tiago.leifert").Library.Add(Store.Find(x => x.GameName == "Fifa 23"));
+            Users.Find(x => x.Username == "tiago.leifert").Library.Add(Store.Find(x => x.GameName == "F1 2022"));
+            Users.Find(x => x.Username == "miraildes.mota").Library.Add(Store.Find(x => x.GameName == "Fifa 23"));
+            Users.Find(x => x.Username == "miraildes.mota").Library.Add(Store.Find(x => x.GameName == "Stray"));
+            Users.Find(x => x.Username == "larissa.machado").Library.Add(Store.Find(x => x.GameName == "Among Us"));
+            Users.Find(x => x.Username == "joao.pedro").Library.Add(Store.Find(x => x.GameName == "It Takes Two"));
+            Users.Find(x => x.Username == "ana.sofia").Library.Add(Store.Find(x => x.GameName == "Asseto Corsa"));
+            Users.Find(x => x.Username == "maria.lurdes").Library.Add(Store.Find(x => x.GameName == "Garrys Mode"));
+            Users.Find(x => x.Username == "beatriz.silva").Library.Add(Store.Find(x => x.GameName == "Counter Strike Global Offensive"));
+            Users.Find(x => x.Username == "jose.santos").Library.Add(Store.Find(x => x.GameName == "Mortal Kombat 11"));
+            Users.Find(x => x.Username == "rafaela.vilasboas").Library.Add(Store.Find(x => x.GameName == "Digimon Survive"));
+
+
 
         }
         public static void AddingGamesToStore(List<Store> Store)
