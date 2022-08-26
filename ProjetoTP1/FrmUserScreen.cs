@@ -42,7 +42,7 @@ namespace Projeto
 
             lbl_UserName.Text = inputUsername;
             lbl_ExibitionName.Text = Users.Find(x => x.Username == inputUsername).ExibitionName;
-            lbl_Wallet.Text = Users.Find(x => x.Username == inputUsername).Wallet.ToString();
+            lbl_Wallet.Text = $"R$ {Users.Find(x => x.Username == inputUsername).Wallet.ToString()}";
             
             Services.GetLibrary(Users, inputUsername, listView1);
 

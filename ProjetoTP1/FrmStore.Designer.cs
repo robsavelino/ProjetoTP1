@@ -75,12 +75,15 @@
             // 
             // btnSearchGameInStore
             // 
-            this.btnSearchGameInStore.Location = new System.Drawing.Point(160, 55);
+            this.btnSearchGameInStore.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnSearchGameInStore.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearchGameInStore.ForeColor = System.Drawing.Color.Gold;
+            this.btnSearchGameInStore.Location = new System.Drawing.Point(160, 50);
             this.btnSearchGameInStore.Name = "btnSearchGameInStore";
-            this.btnSearchGameInStore.Size = new System.Drawing.Size(125, 23);
+            this.btnSearchGameInStore.Size = new System.Drawing.Size(120, 30);
             this.btnSearchGameInStore.TabIndex = 2;
             this.btnSearchGameInStore.Text = "Search Game";
-            this.btnSearchGameInStore.UseVisualStyleBackColor = true;
+            this.btnSearchGameInStore.UseVisualStyleBackColor = false;
             this.btnSearchGameInStore.Click += new System.EventHandler(this.btnSearchGameInStore_Click);
             // 
             // btnAddGameToStore
@@ -98,12 +101,15 @@
             // 
             // btnRemoveGameFromStore
             // 
-            this.btnRemoveGameFromStore.Location = new System.Drawing.Point(514, 55);
+            this.btnRemoveGameFromStore.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnRemoveGameFromStore.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveGameFromStore.ForeColor = System.Drawing.Color.Gold;
+            this.btnRemoveGameFromStore.Location = new System.Drawing.Point(519, 50);
             this.btnRemoveGameFromStore.Name = "btnRemoveGameFromStore";
-            this.btnRemoveGameFromStore.Size = new System.Drawing.Size(125, 23);
+            this.btnRemoveGameFromStore.Size = new System.Drawing.Size(120, 30);
             this.btnRemoveGameFromStore.TabIndex = 4;
             this.btnRemoveGameFromStore.Text = "Remove game";
-            this.btnRemoveGameFromStore.UseVisualStyleBackColor = true;
+            this.btnRemoveGameFromStore.UseVisualStyleBackColor = false;
             this.btnRemoveGameFromStore.Click += new System.EventHandler(this.btnRemoveGameFromStore_Click);
             // 
             // lsvStoreFull
@@ -140,9 +146,9 @@
             // 
             // txbGameInput
             // 
-            this.txbGameInput.Location = new System.Drawing.Point(291, 55);
+            this.txbGameInput.Location = new System.Drawing.Point(286, 55);
             this.txbGameInput.Name = "txbGameInput";
-            this.txbGameInput.Size = new System.Drawing.Size(221, 23);
+            this.txbGameInput.Size = new System.Drawing.Size(227, 23);
             this.txbGameInput.TabIndex = 6;
             // 
             // lblAddGameName
