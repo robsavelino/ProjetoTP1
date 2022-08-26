@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FrmProjeto;
 
 namespace Projeto
 {
@@ -86,6 +87,14 @@ namespace Projeto
             txbAddGamePrice.Clear();
             txbAddGameGenre.Clear();
             txbAddGamePublisher.Clear();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new FrmProjectStart();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
     }
 }

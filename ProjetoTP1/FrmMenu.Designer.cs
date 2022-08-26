@@ -38,7 +38,8 @@
             // 
             // btnProgram
             // 
-            this.btnProgram.Location = new System.Drawing.Point(92, 74);
+            this.btnProgram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnProgram.Location = new System.Drawing.Point(94, 101);
             this.btnProgram.Name = "btnProgram";
             this.btnProgram.Size = new System.Drawing.Size(152, 55);
             this.btnProgram.TabIndex = 0;
@@ -48,30 +49,32 @@
             // 
             // btnAboutUs
             // 
-            this.btnAboutUs.Location = new System.Drawing.Point(92, 168);
+            this.btnAboutUs.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAboutUs.Location = new System.Drawing.Point(94, 195);
             this.btnAboutUs.Name = "btnAboutUs";
             this.btnAboutUs.Size = new System.Drawing.Size(152, 55);
             this.btnAboutUs.TabIndex = 1;
-            this.btnAboutUs.Text = "Sobre";
+            this.btnAboutUs.Text = "About us";
             this.btnAboutUs.UseVisualStyleBackColor = true;
             this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(92, 263);
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.Location = new System.Drawing.Point(94, 290);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(152, 55);
             this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "Sair";
+            this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ptb01
             // 
             this.ptb01.Image = ((System.Drawing.Image)(resources.GetObject("ptb01.Image")));
-            this.ptb01.Location = new System.Drawing.Point(317, 46);
+            this.ptb01.Location = new System.Drawing.Point(327, 28);
             this.ptb01.Name = "ptb01";
-            this.ptb01.Size = new System.Drawing.Size(387, 321);
+            this.ptb01.Size = new System.Drawing.Size(380, 380);
             this.ptb01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptb01.TabIndex = 3;
             this.ptb01.TabStop = false;
@@ -80,13 +83,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ptb01);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.btnProgram);
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptb01)).EndInit();

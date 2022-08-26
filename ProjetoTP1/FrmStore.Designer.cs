@@ -47,6 +47,7 @@
             this.lblAddGameGenre = new System.Windows.Forms.Label();
             this.txbAddGamePublisher = new System.Windows.Forms.TextBox();
             this.lblAddPublisher = new System.Windows.Forms.Label();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -71,7 +72,7 @@
             // 
             // btnSearchGameInStore
             // 
-            this.btnSearchGameInStore.Location = new System.Drawing.Point(179, 46);
+            this.btnSearchGameInStore.Location = new System.Drawing.Point(169, 20);
             this.btnSearchGameInStore.Name = "btnSearchGameInStore";
             this.btnSearchGameInStore.Size = new System.Drawing.Size(111, 23);
             this.btnSearchGameInStore.TabIndex = 2;
@@ -91,7 +92,7 @@
             // 
             // btnRemoveGameFromStore
             // 
-            this.btnRemoveGameFromStore.Location = new System.Drawing.Point(523, 46);
+            this.btnRemoveGameFromStore.Location = new System.Drawing.Point(513, 20);
             this.btnRemoveGameFromStore.Name = "btnRemoveGameFromStore";
             this.btnRemoveGameFromStore.Size = new System.Drawing.Size(135, 23);
             this.btnRemoveGameFromStore.TabIndex = 4;
@@ -106,7 +107,7 @@
             this.gamePrice,
             this.gameGenre,
             this.gamePublisher});
-            this.lsvStoreFull.Location = new System.Drawing.Point(179, 75);
+            this.lsvStoreFull.Location = new System.Drawing.Point(169, 49);
             this.lsvStoreFull.Name = "lsvStoreFull";
             this.lsvStoreFull.Size = new System.Drawing.Size(479, 327);
             this.lsvStoreFull.TabIndex = 5;
@@ -133,7 +134,7 @@
             // 
             // txbGameInput
             // 
-            this.txbGameInput.Location = new System.Drawing.Point(296, 46);
+            this.txbGameInput.Location = new System.Drawing.Point(286, 20);
             this.txbGameInput.Name = "txbGameInput";
             this.txbGameInput.Size = new System.Drawing.Size(221, 23);
             this.txbGameInput.TabIndex = 6;
@@ -206,12 +207,23 @@
             this.lblAddPublisher.Text = "Publisher";
             this.lblAddPublisher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(549, 398);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(125, 40);
+            this.btnReturn.TabIndex = 17;
+            this.btnReturn.Text = "Voltar";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // FrmStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(686, 450);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.txbAddGamePublisher);
             this.Controls.Add(this.lblAddPublisher);
             this.Controls.Add(this.txbAddGameGenre);
@@ -228,6 +240,7 @@
             this.Controls.Add(this.btnOpenStore);
             this.Controls.Add(this.lblTitle);
             this.Name = "FrmStore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store";
             this.Load += new System.EventHandler(this.FrmStore_Load);
             this.ResumeLayout(false);
@@ -256,5 +269,6 @@
         private Label lblAddGameGenre;
         private TextBox txbAddGamePublisher;
         private Label lblAddPublisher;
+        private Button btnReturn;
     }
 }

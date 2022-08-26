@@ -88,18 +88,18 @@
             this.pictureBox1.ErrorImage = global::Projeto.Properties.Resources.DefaultUser;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = global::Projeto.Properties.Resources.DefaultUser;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(1124, 549);
+            this.btnReturn.Location = new System.Drawing.Point(1101, 590);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(102, 43);
+            this.btnReturn.Size = new System.Drawing.Size(125, 40);
             this.btnReturn.TabIndex = 12;
             this.btnReturn.Text = "Voltar";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -108,29 +108,32 @@
             // lbl_ExibitionName
             // 
             this.lbl_ExibitionName.AutoSize = true;
-            this.lbl_ExibitionName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ExibitionName.Location = new System.Drawing.Point(49, 198);
+            this.lbl_ExibitionName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_ExibitionName.Location = new System.Drawing.Point(65, 194);
             this.lbl_ExibitionName.Name = "lbl_ExibitionName";
-            this.lbl_ExibitionName.Size = new System.Drawing.Size(0, 25);
+            this.lbl_ExibitionName.Size = new System.Drawing.Size(19, 30);
             this.lbl_ExibitionName.TabIndex = 5;
+            this.lbl_ExibitionName.Text = " ";
             // 
             // lbl_UserName
             // 
             this.lbl_UserName.AutoSize = true;
-            this.lbl_UserName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_UserName.Location = new System.Drawing.Point(49, 236);
+            this.lbl_UserName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lbl_UserName.Location = new System.Drawing.Point(65, 224);
             this.lbl_UserName.Name = "lbl_UserName";
-            this.lbl_UserName.Size = new System.Drawing.Size(0, 17);
+            this.lbl_UserName.Size = new System.Drawing.Size(12, 17);
             this.lbl_UserName.TabIndex = 6;
+            this.lbl_UserName.Text = " ";
             // 
             // lbl_Wallet
             // 
             this.lbl_Wallet.AutoSize = true;
-            this.lbl_Wallet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Wallet.Location = new System.Drawing.Point(50, 266);
+            this.lbl_Wallet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Wallet.Location = new System.Drawing.Point(65, 259);
             this.lbl_Wallet.Name = "lbl_Wallet";
-            this.lbl_Wallet.Size = new System.Drawing.Size(0, 17);
+            this.lbl_Wallet.Size = new System.Drawing.Size(14, 21);
             this.lbl_Wallet.TabIndex = 7;
+            this.lbl_Wallet.Text = " ";
             // 
             // lblInput
             // 
@@ -314,7 +317,7 @@
             // 
             // btnAddFounds
             // 
-            this.btnAddFounds.Location = new System.Drawing.Point(49, 321);
+            this.btnAddFounds.Location = new System.Drawing.Point(42, 376);
             this.btnAddFounds.Name = "btnAddFounds";
             this.btnAddFounds.Size = new System.Drawing.Size(118, 23);
             this.btnAddFounds.TabIndex = 25;
@@ -324,7 +327,7 @@
             // 
             // txbAmount
             // 
-            this.txbAmount.Location = new System.Drawing.Point(50, 292);
+            this.txbAmount.Location = new System.Drawing.Point(43, 347);
             this.txbAmount.Name = "txbAmount";
             this.txbAmount.Size = new System.Drawing.Size(129, 23);
             this.txbAmount.TabIndex = 26;
@@ -333,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1238, 642);
             this.Controls.Add(this.txbAmount);
             this.Controls.Add(this.btnAddFounds);
@@ -362,6 +365,7 @@
             this.Controls.Add(this.btnFriends);
             this.Controls.Add(this.btnGames);
             this.Name = "FrmUserScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUserScreen";
             this.Load += new System.EventHandler(this.FrmUserScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

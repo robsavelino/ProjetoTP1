@@ -57,5 +57,10 @@ namespace FrmProjeto
             var form = new FrmStore(Store, Users);
             form.Show();
         }
+
+        private void ptb01_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
