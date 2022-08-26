@@ -71,8 +71,21 @@ namespace Projeto
             var game = Store.Find(x => x.GameName == gameInput);
             Store.Remove(game);
             MessageBox.Show($"The game {game.GameName} was removed from the store.");
+            txbGameInput.Clear();
         }
 
+        private void btnAddGameToStore_Click(object sender, EventArgs e)
+        {
+            var gameName = txbAddGameName.Text;
+            var gamePrice = txbAddGamePrice.Text;
+            var gameGenre = txbAddGameGenre.Text;
+            var gamePublisher = txbAddGamePublisher.Text;
+            Services.AddGameToStore(Store, gameName, gamePrice, gameGenre, gamePublisher);
 
+            txbAddGameName.Clear();
+            txbAddGamePrice.Clear();
+            txbAddGameGenre.Clear();
+            txbAddGamePublisher.Clear();
+        }
     }
 }

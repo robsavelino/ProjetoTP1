@@ -39,6 +39,14 @@
             this.gameGenre = new System.Windows.Forms.ColumnHeader();
             this.gamePublisher = new System.Windows.Forms.ColumnHeader();
             this.txbGameInput = new System.Windows.Forms.TextBox();
+            this.lblAddGameName = new System.Windows.Forms.Label();
+            this.txbAddGameName = new System.Windows.Forms.TextBox();
+            this.txbAddGamePrice = new System.Windows.Forms.TextBox();
+            this.lblAddPriceGame = new System.Windows.Forms.Label();
+            this.txbAddGameGenre = new System.Windows.Forms.TextBox();
+            this.lblAddGameGenre = new System.Windows.Forms.Label();
+            this.txbAddGamePublisher = new System.Windows.Forms.TextBox();
+            this.lblAddPublisher = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -57,7 +65,7 @@
             this.btnOpenStore.Name = "btnOpenStore";
             this.btnOpenStore.Size = new System.Drawing.Size(113, 50);
             this.btnOpenStore.TabIndex = 1;
-            this.btnOpenStore.Text = "Abrir Loja";
+            this.btnOpenStore.Text = "Open Store";
             this.btnOpenStore.UseVisualStyleBackColor = true;
             this.btnOpenStore.Click += new System.EventHandler(this.btnOpenStore_Click);
             // 
@@ -67,7 +75,7 @@
             this.btnSearchGameInStore.Name = "btnSearchGameInStore";
             this.btnSearchGameInStore.Size = new System.Drawing.Size(111, 23);
             this.btnSearchGameInStore.TabIndex = 2;
-            this.btnSearchGameInStore.Text = "Pesquisar Jogo";
+            this.btnSearchGameInStore.Text = "Search Game";
             this.btnSearchGameInStore.UseVisualStyleBackColor = true;
             this.btnSearchGameInStore.Click += new System.EventHandler(this.btnSearchGameInStore_Click);
             // 
@@ -77,8 +85,9 @@
             this.btnAddGameToStore.Name = "btnAddGameToStore";
             this.btnAddGameToStore.Size = new System.Drawing.Size(113, 50);
             this.btnAddGameToStore.TabIndex = 3;
-            this.btnAddGameToStore.Text = "Adicionar Jogo a Loja";
+            this.btnAddGameToStore.Text = "Add Game to Store";
             this.btnAddGameToStore.UseVisualStyleBackColor = true;
+            this.btnAddGameToStore.Click += new System.EventHandler(this.btnAddGameToStore_Click);
             // 
             // btnRemoveGameFromStore
             // 
@@ -86,7 +95,7 @@
             this.btnRemoveGameFromStore.Name = "btnRemoveGameFromStore";
             this.btnRemoveGameFromStore.Size = new System.Drawing.Size(135, 23);
             this.btnRemoveGameFromStore.TabIndex = 4;
-            this.btnRemoveGameFromStore.Text = "Remover Jogo da Loja";
+            this.btnRemoveGameFromStore.Text = "Remove game";
             this.btnRemoveGameFromStore.UseVisualStyleBackColor = true;
             this.btnRemoveGameFromStore.Click += new System.EventHandler(this.btnRemoveGameFromStore_Click);
             // 
@@ -99,7 +108,7 @@
             this.gamePublisher});
             this.lsvStoreFull.Location = new System.Drawing.Point(179, 75);
             this.lsvStoreFull.Name = "lsvStoreFull";
-            this.lsvStoreFull.Size = new System.Drawing.Size(479, 273);
+            this.lsvStoreFull.Size = new System.Drawing.Size(479, 327);
             this.lsvStoreFull.TabIndex = 5;
             this.lsvStoreFull.UseCompatibleStateImageBehavior = false;
             this.lsvStoreFull.View = System.Windows.Forms.View.Details;
@@ -129,12 +138,88 @@
             this.txbGameInput.Size = new System.Drawing.Size(221, 23);
             this.txbGameInput.TabIndex = 6;
             // 
+            // lblAddGameName
+            // 
+            this.lblAddGameName.AutoSize = true;
+            this.lblAddGameName.Location = new System.Drawing.Point(18, 200);
+            this.lblAddGameName.Name = "lblAddGameName";
+            this.lblAddGameName.Size = new System.Drawing.Size(73, 15);
+            this.lblAddGameName.TabIndex = 7;
+            this.lblAddGameName.Text = "Game Name";
+            this.lblAddGameName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txbAddGameName
+            // 
+            this.txbAddGameName.Location = new System.Drawing.Point(18, 218);
+            this.txbAddGameName.Name = "txbAddGameName";
+            this.txbAddGameName.Size = new System.Drawing.Size(113, 23);
+            this.txbAddGameName.TabIndex = 8;
+            // 
+            // txbAddGamePrice
+            // 
+            this.txbAddGamePrice.Location = new System.Drawing.Point(18, 271);
+            this.txbAddGamePrice.Name = "txbAddGamePrice";
+            this.txbAddGamePrice.Size = new System.Drawing.Size(113, 23);
+            this.txbAddGamePrice.TabIndex = 10;
+            // 
+            // lblAddPriceGame
+            // 
+            this.lblAddPriceGame.AutoSize = true;
+            this.lblAddPriceGame.Location = new System.Drawing.Point(18, 253);
+            this.lblAddPriceGame.Name = "lblAddPriceGame";
+            this.lblAddPriceGame.Size = new System.Drawing.Size(33, 15);
+            this.lblAddPriceGame.TabIndex = 9;
+            this.lblAddPriceGame.Text = "Price";
+            this.lblAddPriceGame.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txbAddGameGenre
+            // 
+            this.txbAddGameGenre.Location = new System.Drawing.Point(18, 325);
+            this.txbAddGameGenre.Name = "txbAddGameGenre";
+            this.txbAddGameGenre.Size = new System.Drawing.Size(113, 23);
+            this.txbAddGameGenre.TabIndex = 12;
+            // 
+            // lblAddGameGenre
+            // 
+            this.lblAddGameGenre.AutoSize = true;
+            this.lblAddGameGenre.Location = new System.Drawing.Point(18, 307);
+            this.lblAddGameGenre.Name = "lblAddGameGenre";
+            this.lblAddGameGenre.Size = new System.Drawing.Size(38, 15);
+            this.lblAddGameGenre.TabIndex = 11;
+            this.lblAddGameGenre.Text = "Genre";
+            this.lblAddGameGenre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txbAddGamePublisher
+            // 
+            this.txbAddGamePublisher.Location = new System.Drawing.Point(18, 379);
+            this.txbAddGamePublisher.Name = "txbAddGamePublisher";
+            this.txbAddGamePublisher.Size = new System.Drawing.Size(113, 23);
+            this.txbAddGamePublisher.TabIndex = 16;
+            // 
+            // lblAddPublisher
+            // 
+            this.lblAddPublisher.AutoSize = true;
+            this.lblAddPublisher.Location = new System.Drawing.Point(18, 361);
+            this.lblAddPublisher.Name = "lblAddPublisher";
+            this.lblAddPublisher.Size = new System.Drawing.Size(56, 15);
+            this.lblAddPublisher.TabIndex = 15;
+            this.lblAddPublisher.Text = "Publisher";
+            this.lblAddPublisher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FrmStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(686, 450);
+            this.Controls.Add(this.txbAddGamePublisher);
+            this.Controls.Add(this.lblAddPublisher);
+            this.Controls.Add(this.txbAddGameGenre);
+            this.Controls.Add(this.lblAddGameGenre);
+            this.Controls.Add(this.txbAddGamePrice);
+            this.Controls.Add(this.lblAddPriceGame);
+            this.Controls.Add(this.txbAddGameName);
+            this.Controls.Add(this.lblAddGameName);
             this.Controls.Add(this.txbGameInput);
             this.Controls.Add(this.lsvStoreFull);
             this.Controls.Add(this.btnRemoveGameFromStore);
@@ -163,5 +248,13 @@
         private ColumnHeader gameGenre;
         private ColumnHeader gamePublisher;
         private TextBox txbGameInput;
+        private Label lblAddGameName;
+        private TextBox txbAddGameName;
+        private TextBox txbAddGamePrice;
+        private Label lblAddPriceGame;
+        private TextBox txbAddGameGenre;
+        private Label lblAddGameGenre;
+        private TextBox txbAddGamePublisher;
+        private Label lblAddPublisher;
     }
 }
