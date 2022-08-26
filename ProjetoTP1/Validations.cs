@@ -43,7 +43,7 @@ namespace Projeto
 
         public static bool ValidateGame(List<Store> store, string game)
         {
-            if (store.Find(x => x.GameName == game) == null)
+            if (store.Find(x => x.GameName.ToLower() == game.ToLower()) == null)
                 return false;
             return true; 
         }

@@ -155,6 +155,8 @@ namespace Projeto
             var gameName = txbGameName.Text.Trim().ToLower();
             var usernameInput = txbInput.Text.Trim().ToLower();
             Services.AddGame(Users, usernameInput, Store, gameName);
+            
+
             txbGameName.Clear();
             txbGameName.Focus();
 
