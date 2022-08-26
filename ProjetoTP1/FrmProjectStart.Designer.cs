@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProjectStart));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnGoToUsers = new System.Windows.Forms.Button();
             this.btnGoToStore = new System.Windows.Forms.Button();
+            this.ptb01 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb01)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -74,12 +77,23 @@
             this.btnGoToStore.UseVisualStyleBackColor = true;
             this.btnGoToStore.Click += new System.EventHandler(this.btnGoToStore_Click);
             // 
+            // ptb01
+            // 
+            this.ptb01.Image = ((System.Drawing.Image)(resources.GetObject("ptb01.Image")));
+            this.ptb01.Location = new System.Drawing.Point(437, 59);
+            this.ptb01.Name = "ptb01";
+            this.ptb01.Size = new System.Drawing.Size(222, 197);
+            this.ptb01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb01.TabIndex = 4;
+            this.ptb01.TabStop = false;
+            // 
             // FrmProjectStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ptb01);
             this.Controls.Add(this.btnGoToStore);
             this.Controls.Add(this.btnGoToUsers);
             this.Controls.Add(this.btnClose);
@@ -87,6 +101,7 @@
             this.Name = "FrmProjectStart";
             this.Text = "FrmProjectStart";
             this.Load += new System.EventHandler(this.FrmProjectStart_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb01)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -97,5 +112,6 @@
         private Button btnClose;
         private Button btnGoToUsers;
         private Button btnGoToStore;
+        private PictureBox ptb01;
     }
 }

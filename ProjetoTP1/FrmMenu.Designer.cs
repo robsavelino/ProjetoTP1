@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.btnProgram = new System.Windows.Forms.Button();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.ptb01 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb01)).BeginInit();
             this.SuspendLayout();
             // 
             // btnProgram
@@ -63,18 +66,30 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // ptb01
+            // 
+            this.ptb01.Image = ((System.Drawing.Image)(resources.GetObject("ptb01.Image")));
+            this.ptb01.Location = new System.Drawing.Point(317, 46);
+            this.ptb01.Name = "ptb01";
+            this.ptb01.Size = new System.Drawing.Size(387, 321);
+            this.ptb01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb01.TabIndex = 3;
+            this.ptb01.TabStop = false;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ptb01);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.btnProgram);
             this.Name = "FrmMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb01)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,5 +99,6 @@
         private Button btnProgram;
         private Button btnAboutUs;
         private Button btnClose;
+        private PictureBox ptb01;
     }
 }
