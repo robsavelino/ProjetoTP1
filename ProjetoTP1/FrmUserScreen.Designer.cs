@@ -191,7 +191,7 @@
             // ptb02
             // 
             this.ptb02.Image = ((System.Drawing.Image)(resources.GetObject("ptb02.Image")));
-            this.ptb02.Location = new System.Drawing.Point(1039, 448);
+            this.ptb02.Location = new System.Drawing.Point(21, 311);
             this.ptb02.Name = "ptb02";
             this.ptb02.Size = new System.Drawing.Size(175, 173);
             this.ptb02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
