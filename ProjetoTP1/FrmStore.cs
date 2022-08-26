@@ -75,13 +75,13 @@ namespace Projeto
             txbGameInput.Clear();
         }
 
-        private void btnAddGameToStore_Click(object sender, EventArgs e)
+        private async void btnAddGameToStore_Click(object sender, EventArgs e)
         {
             var gameName = txbAddGameName.Text;
             var gamePrice = txbAddGamePrice.Text;
             var gameGenre = txbAddGameGenre.Text;
             var gamePublisher = txbAddGamePublisher.Text;
-            Services.AddGameToStore(Store, gameName, gamePrice, gameGenre, gamePublisher);
+            await Services.AddGameToStore(Store, gameName, gamePrice, gameGenre, gamePublisher);
 
             txbAddGameName.Clear();
             txbAddGamePrice.Clear();

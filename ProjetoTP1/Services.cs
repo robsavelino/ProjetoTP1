@@ -115,10 +115,11 @@ namespace Projeto
             var auxGame = store.Find(x => x.GameName.ToLower() == game.ToLower());
             users.Find(x => x.Username == username).Library.Add(auxGame);
         }
-        public static void AddGameToStore(List<Store> store, string gameName, string price, string genre, string publisher)
+        public async static Task AddGameToStore(List<Store> store, string gameName, string price, string genre, string publisher)
         {
             if (!Validations.ValidateGame(store ,gameName) && Validations.ValidatePriceInput(price))
             {
+                await Task.Delay(TimeSpan.FromMilliseconds(3000));
                 store.Add(new Store(store.Count() + 1, gameName, price, genre, publisher));
                 MessageBox.Show($"O jogo {gameName} foi adicionado a loja!");
                 return;
