@@ -410,7 +410,7 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="lbl_PT.Text" xml:space="preserve">
     <value>Olá, 
 Você está na Let’s Play! 
 Somos uma plataforma de jogos onde você pode compartilhar experiências com seus amigos. 
@@ -434,5 +434,30 @@ Nossa plataforma é construída por três desenvolvedores e entusiastas dos jogo
  - Lugan Thierry;
  - Matheus Alencastro;
  - Roberto Avelino. </value>
+  </data>
+  <data name="lbl_EN.Text" xml:space="preserve">
+    <value>Hello,
+You are on Let's Play!
+We are a gaming platform where you can share experiences with your friends.
+My big sister is Steam. And my closest cousin is Xbox Live.
+
+In the user tab you can:
+  - Create a user;
+  - Buy games;
+  - Add friends;
+  - View your friends' games;
+  - View games from other famous players;
+  - Add money to buy games.
+
+In the store tab, you can also:
+  - See games available for sale;
+  - Search for a game in the store;
+  - Add a new game to the store;
+  - Remove a game from the store.
+
+Our platform is built by three developers and game enthusiasts:
+  - Lugan Thierry;
+  - Matheus Alencastro;
+  - Roberto Avellino.</value>
   </data>
 </root>
