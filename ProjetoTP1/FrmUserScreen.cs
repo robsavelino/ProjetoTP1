@@ -22,12 +22,11 @@ namespace Projeto
             this.Store = Store;
             this.Users = Users;
         }
-
-
         private void FrmUserScreen_Load(object sender, EventArgs e)
         {
             
         }
+
         private void btnGames_Click(object sender, EventArgs e)
         {
             var inputUsername = txbInput.Text.Trim().ToLower();
@@ -159,14 +158,7 @@ namespace Projeto
             txbGameName.Clear();
             txbGameName.Focus();
 
-        }
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new FrmProjectStart();
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
+        }  
         private void btnAddFounds_Click(object sender, EventArgs e)
         {
             var inputUsername = txbInput.Text.Trim().ToLower();
@@ -179,6 +171,13 @@ namespace Projeto
 
             txbAmount.Clear();
             txbAmount.Focus();
+        }
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new FrmProjectStart();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
     }
 }
