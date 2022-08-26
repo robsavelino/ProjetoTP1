@@ -80,7 +80,7 @@ namespace Projeto
             var gamesUser = users.Find(x => x.Username == username).Library;
             return store.Where(x => x.Equals(gamesUser) == false).ToList();
         }
-        public List<Store> GamesInCommon(List<User> users, string username, string friend)
+        public static List<Store> GamesInCommon(List<User> users, string username, string friend)
         {
             if (!Validations.ValidateUsername(users, username))
             {
@@ -93,20 +93,27 @@ namespace Projeto
                 return null;
             }
 
-            var auxUser = users.Find(x => x.Username == username);
-            var auxFriend = users.Find(x => x.Username == friend);
+            var auxUser = users.Find(x => x.Username == username).Library;
+            var auxFriend = users.Find(x => x.Username == friend).Library;
 
-            return auxUser.Library.Where(x => x.Equals(auxFriend.Library)).ToList();
+            List<Store> result = new();
+
+            foreach (var item in auxUser)
+            {
+                foreach (var item2 in auxFriend)
+                {
+                   if(item == item2)
+                        result.Add(item);
+                }
+            }
+            return result;
         }
-        public void AddGame(List<User> users, string username, List<Store> store, string game)
+        public static void AddGame(List<User> users, string username, List<Store> store, string game)
         {
             if (!Validations.ValidateHasGame(users, username, store, game))
-            {
                 return; 
-            }
-
-            var auxGame = store.Find(x => x.GameName == game);
-
+            
+            var auxGame = store.Find(x => x.GameName.ToLower() == game.ToLower());
             users.Find(x => x.Username == username).Library.Add(auxGame);
         }
         public string AddGameToStore(List<Store> store, string gameName, string price, string genre, string publisher)
@@ -138,6 +145,40 @@ namespace Projeto
             var matchGame = store.FirstOrDefault(x => x.GameName ==gameName);
             return matchGame;
         }
+        public static void CreateNewUser(List<User> Users, string newUsername, string newExbName)
+        {
+            if(Validations.ValidateUsername(Users, newUsername))
+            {
+                MessageBox.Show("User already exists");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(newUsername))
+            {
+                MessageBox.Show("Username can't be empty");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(newExbName))
+            {
+                MessageBox.Show("Exibition name can't be empty");
+                return;
+            }
 
+            Users.Add(new User(Users.Count + 1, newUsername, newExbName, "0"));
+        }
+        public static void AddFounds(List<User> users, string username, string amount)
+        {
+            if(!Validations.ValidateUsername(users, username))
+            {
+                MessageBox.Show("User not found");
+                return;
+            }
+            if (!Validations.ValidateFoundInput(amount))
+            {
+                MessageBox.Show("Found amount is invalid");
+                return;
+            }
+            users.Find(x => x.Username == username).Wallet += Convert.ToDouble(amount);
+
+        }
     }
 }
