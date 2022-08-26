@@ -98,11 +98,12 @@
             // 
             // btnReturn
             // 
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReturn.Location = new System.Drawing.Point(1101, 590);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(125, 40);
             this.btnReturn.TabIndex = 12;
-            this.btnReturn.Text = "Voltar";
+            this.btnReturn.Text = "Back";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
