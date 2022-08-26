@@ -38,35 +38,41 @@
             // 
             // btnProgram
             // 
-            this.btnProgram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnProgram.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnProgram.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProgram.ForeColor = System.Drawing.Color.Gold;
             this.btnProgram.Location = new System.Drawing.Point(94, 101);
             this.btnProgram.Name = "btnProgram";
             this.btnProgram.Size = new System.Drawing.Size(152, 55);
             this.btnProgram.TabIndex = 0;
             this.btnProgram.Text = "Start";
-            this.btnProgram.UseVisualStyleBackColor = true;
+            this.btnProgram.UseVisualStyleBackColor = false;
             this.btnProgram.Click += new System.EventHandler(this.btnProgram_Click);
             // 
             // btnAboutUs
             // 
-            this.btnAboutUs.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAboutUs.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnAboutUs.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAboutUs.ForeColor = System.Drawing.Color.Gold;
             this.btnAboutUs.Location = new System.Drawing.Point(94, 195);
             this.btnAboutUs.Name = "btnAboutUs";
             this.btnAboutUs.Size = new System.Drawing.Size(152, 55);
             this.btnAboutUs.TabIndex = 1;
             this.btnAboutUs.Text = "About us";
-            this.btnAboutUs.UseVisualStyleBackColor = true;
+            this.btnAboutUs.UseVisualStyleBackColor = false;
             this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.Color.Gold;
             this.btnClose.Location = new System.Drawing.Point(94, 290);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(152, 55);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Exit";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ptb01
@@ -89,6 +95,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.btnProgram);
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

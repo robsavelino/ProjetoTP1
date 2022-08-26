@@ -39,46 +39,54 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReturn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReturn.ForeColor = System.Drawing.Color.Gold;
             this.btnReturn.Location = new System.Drawing.Point(507, 395);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(125, 40);
             this.btnReturn.TabIndex = 0;
             this.btnReturn.Text = "Back";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.Color.Gold;
             this.btnClose.Location = new System.Drawing.Point(651, 395);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(125, 40);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Exit";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnGoToUsers
             // 
-            this.btnGoToUsers.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGoToUsers.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnGoToUsers.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGoToUsers.ForeColor = System.Drawing.Color.Gold;
             this.btnGoToUsers.Location = new System.Drawing.Point(114, 147);
             this.btnGoToUsers.Name = "btnGoToUsers";
             this.btnGoToUsers.Size = new System.Drawing.Size(200, 80);
             this.btnGoToUsers.TabIndex = 2;
             this.btnGoToUsers.Text = "Users";
-            this.btnGoToUsers.UseVisualStyleBackColor = true;
+            this.btnGoToUsers.UseVisualStyleBackColor = false;
             this.btnGoToUsers.Click += new System.EventHandler(this.btnGoToUsers_Click);
             // 
             // btnGoToStore
             // 
-            this.btnGoToStore.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGoToStore.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnGoToStore.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGoToStore.ForeColor = System.Drawing.Color.Gold;
             this.btnGoToStore.Location = new System.Drawing.Point(498, 147);
             this.btnGoToStore.Name = "btnGoToStore";
             this.btnGoToStore.Size = new System.Drawing.Size(200, 80);
             this.btnGoToStore.TabIndex = 3;
             this.btnGoToStore.Text = "Store";
-            this.btnGoToStore.UseVisualStyleBackColor = true;
+            this.btnGoToStore.UseVisualStyleBackColor = false;
             this.btnGoToStore.Click += new System.EventHandler(this.btnGoToStore_Click);
             // 
             // ptb01

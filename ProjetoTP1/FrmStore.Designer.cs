@@ -62,12 +62,15 @@
             // 
             // btnOpenStore
             // 
+            this.btnOpenStore.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnOpenStore.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOpenStore.ForeColor = System.Drawing.Color.Gold;
             this.btnOpenStore.Location = new System.Drawing.Point(18, 55);
             this.btnOpenStore.Name = "btnOpenStore";
             this.btnOpenStore.Size = new System.Drawing.Size(113, 50);
             this.btnOpenStore.TabIndex = 1;
             this.btnOpenStore.Text = "Open Store";
-            this.btnOpenStore.UseVisualStyleBackColor = true;
+            this.btnOpenStore.UseVisualStyleBackColor = false;
             this.btnOpenStore.Click += new System.EventHandler(this.btnOpenStore_Click);
             // 
             // btnSearchGameInStore
@@ -82,12 +85,15 @@
             // 
             // btnAddGameToStore
             // 
+            this.btnAddGameToStore.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnAddGameToStore.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddGameToStore.ForeColor = System.Drawing.Color.Gold;
             this.btnAddGameToStore.Location = new System.Drawing.Point(671, 55);
             this.btnAddGameToStore.Name = "btnAddGameToStore";
             this.btnAddGameToStore.Size = new System.Drawing.Size(130, 50);
             this.btnAddGameToStore.TabIndex = 3;
             this.btnAddGameToStore.Text = "Add Game to Store";
-            this.btnAddGameToStore.UseVisualStyleBackColor = true;
+            this.btnAddGameToStore.UseVisualStyleBackColor = false;
             this.btnAddGameToStore.Click += new System.EventHandler(this.btnAddGameToStore_Click);
             // 
             // btnRemoveGameFromStore
@@ -209,13 +215,15 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReturn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReturn.ForeColor = System.Drawing.Color.Gold;
             this.btnReturn.Location = new System.Drawing.Point(694, 398);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(125, 40);
             this.btnReturn.TabIndex = 17;
             this.btnReturn.Text = "Back";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // FrmStore

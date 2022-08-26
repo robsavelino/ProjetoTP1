@@ -66,22 +66,28 @@
             // 
             // btnGames
             // 
+            this.btnGames.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnGames.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGames.ForeColor = System.Drawing.Color.Gold;
             this.btnGames.Location = new System.Drawing.Point(30, 326);
             this.btnGames.Name = "btnGames";
             this.btnGames.Size = new System.Drawing.Size(167, 44);
             this.btnGames.TabIndex = 1;
             this.btnGames.Text = "Games Library";
-            this.btnGames.UseVisualStyleBackColor = true;
+            this.btnGames.UseVisualStyleBackColor = false;
             this.btnGames.Click += new System.EventHandler(this.btnGames_Click);
             // 
             // btnFriends
             // 
+            this.btnFriends.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnFriends.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFriends.ForeColor = System.Drawing.Color.Gold;
             this.btnFriends.Location = new System.Drawing.Point(30, 394);
             this.btnFriends.Name = "btnFriends";
             this.btnFriends.Size = new System.Drawing.Size(167, 44);
             this.btnFriends.TabIndex = 2;
             this.btnFriends.Text = "Friends List";
-            this.btnFriends.UseVisualStyleBackColor = true;
+            this.btnFriends.UseVisualStyleBackColor = false;
             this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
             // 
             // pictureBox1
@@ -98,13 +104,15 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReturn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReturn.ForeColor = System.Drawing.Color.Gold;
             this.btnReturn.Location = new System.Drawing.Point(1101, 590);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(125, 40);
             this.btnReturn.TabIndex = 12;
             this.btnReturn.Text = "Back";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // lbl_ExibitionName
@@ -205,12 +213,15 @@
             // 
             // btnAddFriend
             // 
+            this.btnAddFriend.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnAddFriend.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddFriend.ForeColor = System.Drawing.Color.Gold;
             this.btnAddFriend.Location = new System.Drawing.Point(463, 176);
             this.btnAddFriend.Name = "btnAddFriend";
             this.btnAddFriend.Size = new System.Drawing.Size(167, 44);
             this.btnAddFriend.TabIndex = 7;
             this.btnAddFriend.Text = "Add Friend";
-            this.btnAddFriend.UseVisualStyleBackColor = true;
+            this.btnAddFriend.UseVisualStyleBackColor = false;
             this.btnAddFriend.Click += new System.EventHandler(this.btnAddFriend_Click);
             // 
             // txbFriendInput
@@ -231,32 +242,41 @@
             // 
             // btnCreateUser
             // 
+            this.btnCreateUser.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCreateUser.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCreateUser.ForeColor = System.Drawing.Color.Gold;
             this.btnCreateUser.Location = new System.Drawing.Point(247, 176);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(167, 44);
             this.btnCreateUser.TabIndex = 9;
             this.btnCreateUser.Text = "Create User";
-            this.btnCreateUser.UseVisualStyleBackColor = true;
+            this.btnCreateUser.UseVisualStyleBackColor = false;
             this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
             // btnShowAllUsers
             // 
+            this.btnShowAllUsers.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnShowAllUsers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnShowAllUsers.ForeColor = System.Drawing.Color.Gold;
             this.btnShowAllUsers.Location = new System.Drawing.Point(690, 535);
             this.btnShowAllUsers.Name = "btnShowAllUsers";
-            this.btnShowAllUsers.Size = new System.Drawing.Size(110, 23);
+            this.btnShowAllUsers.Size = new System.Drawing.Size(141, 38);
             this.btnShowAllUsers.TabIndex = 8;
             this.btnShowAllUsers.Text = "Show All Users";
-            this.btnShowAllUsers.UseVisualStyleBackColor = true;
+            this.btnShowAllUsers.UseVisualStyleBackColor = false;
             this.btnShowAllUsers.Click += new System.EventHandler(this.btnShowAllUsers_Click);
             // 
             // btnCommonGames
             // 
+            this.btnCommonGames.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCommonGames.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCommonGames.ForeColor = System.Drawing.Color.Gold;
             this.btnCommonGames.Location = new System.Drawing.Point(463, 108);
             this.btnCommonGames.Name = "btnCommonGames";
             this.btnCommonGames.Size = new System.Drawing.Size(167, 44);
             this.btnCommonGames.TabIndex = 3;
             this.btnCommonGames.Text = "Games in Common";
-            this.btnCommonGames.UseVisualStyleBackColor = true;
+            this.btnCommonGames.UseVisualStyleBackColor = false;
             this.btnCommonGames.Click += new System.EventHandler(this.btnCommonGames_Click);
             // 
             // txbNewUser
@@ -293,12 +313,15 @@
             // 
             // btnAddGameToUser
             // 
+            this.btnAddGameToUser.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnAddGameToUser.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddGameToUser.ForeColor = System.Drawing.Color.Gold;
             this.btnAddGameToUser.Location = new System.Drawing.Point(246, 373);
             this.btnAddGameToUser.Name = "btnAddGameToUser";
             this.btnAddGameToUser.Size = new System.Drawing.Size(167, 44);
             this.btnAddGameToUser.TabIndex = 5;
             this.btnAddGameToUser.Text = "Add Game to Library";
-            this.btnAddGameToUser.UseVisualStyleBackColor = true;
+            this.btnAddGameToUser.UseVisualStyleBackColor = false;
             this.btnAddGameToUser.Click += new System.EventHandler(this.btnAddGameToUser_Click);
             // 
             // txbGameName
@@ -319,12 +342,15 @@
             // 
             // btnAddFounds
             // 
+            this.btnAddFounds.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnAddFounds.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddFounds.ForeColor = System.Drawing.Color.Gold;
             this.btnAddFounds.Location = new System.Drawing.Point(30, 542);
             this.btnAddFounds.Name = "btnAddFounds";
             this.btnAddFounds.Size = new System.Drawing.Size(167, 44);
             this.btnAddFounds.TabIndex = 25;
             this.btnAddFounds.Text = "Add Founds";
-            this.btnAddFounds.UseVisualStyleBackColor = true;
+            this.btnAddFounds.UseVisualStyleBackColor = false;
             this.btnAddFounds.Click += new System.EventHandler(this.btnAddFounds_Click);
             // 
             // txbAmount
