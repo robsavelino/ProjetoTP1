@@ -97,6 +97,8 @@ namespace Projeto
         private void btnShowAllUsers_Click(object sender, EventArgs e)
         {
             listView2.Items.Clear();
+            listView1.Hide();
+            listView2.Show();
             foreach (var item in Users)
             {
                 string[] row = { item.Username, item.ExibitionName };
