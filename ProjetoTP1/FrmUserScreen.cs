@@ -26,7 +26,6 @@ namespace Projeto
         {
             
         }
-
         private void btnGames_Click(object sender, EventArgs e)
         {
             var inputUsername = txbInput.Text.Trim().ToLower();
@@ -43,17 +42,9 @@ namespace Projeto
 
             lbl_UserName.Text = inputUsername;
             lbl_ExibitionName.Text = Users.Find(x => x.Username == inputUsername).ExibitionName;
-            lbl_Wallet.Text = $"R$ {Users.Find(x => x.Username == inputUsername).Wallet.ToString()}";
-
-            listView1.Items.Clear();
+            lbl_Wallet.Text = Users.Find(x => x.Username == inputUsername).Wallet.ToString();
             
-            var result = Services.GetLibrary(Users, inputUsername);
-            foreach (var item in result)
-            {
-                string[] row = { item.GameName, item.Genre, item.Publisher };
-                var ltvTemp = new ListViewItem(row);
-                listView1.Items.Add(ltvTemp);
-            }
+            Services.GetLibrary(Users, inputUsername, listView1);
 
         }
         private void btnFriends_Click(object sender, EventArgs e)
@@ -74,15 +65,7 @@ namespace Projeto
             lbl_ExibitionName.Text = Users.Find(x => x.Username == inputUsername).ExibitionName;
             lbl_Wallet.Text = $"R$ {Users.Find(x => x.Username == inputUsername).Wallet.ToString()}";
 
-            listView2.Items.Clear();
-            var result = Services.GetFriendsList(Users, inputUsername);
-            
-            foreach (var item in result)
-            {
-                string[] row = { item, Users.Find(x => x.Username == item).ExibitionName };
-                var ltvTemp = new ListViewItem(row);
-                listView2.Items.Add(ltvTemp);
-            }          
+            Services.GetFriendsList(Users, inputUsername, listView2);          
         }
         private void btnAddFriend_Click(object sender, EventArgs e)
         {
@@ -154,12 +137,18 @@ namespace Projeto
         {
             var gameName = txbGameName.Text.Trim().ToLower();
             var usernameInput = txbInput.Text.Trim().ToLower();
+
+            if (!Validations.ValidateHasGame(Users, usernameInput, Store, gameName))
+                return;
+
+            listView2.Hide();
+            listView1.Show();
+
             Services.AddGame(Users, usernameInput, Store, gameName);
-            
+            Services.UpdateGamesList(Users, usernameInput, listView1);
 
             txbGameName.Clear();
             txbGameName.Focus();
-
         }  
         private void btnAddFounds_Click(object sender, EventArgs e)
         {

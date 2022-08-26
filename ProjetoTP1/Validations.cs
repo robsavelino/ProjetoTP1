@@ -14,7 +14,6 @@ namespace Projeto
                 return false;
             return true;
         }
-
         public static bool ValidateHasGame (List<User> users, string username, List<Store> store, string game)
         {
             if (!ValidateUsername(users, username))
@@ -40,19 +39,16 @@ namespace Projeto
 
             return true;
         }
-
         public static bool ValidateGame(List<Store> store, string game)
         {
             if (store.Find(x => x.GameName.ToLower() == game.ToLower()) == null)
                 return false;
             return true; 
         }
-
         public static bool ValidatePriceInput (string price)
         {
             return decimal.TryParse(price, out _);
         }
-
         public static bool ValidateFoundInput (string amount)
         {
             return double.TryParse(amount, out _);

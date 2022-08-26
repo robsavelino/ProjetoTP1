@@ -9,23 +9,25 @@ namespace Projeto
 {
     public class Services
     {
-        public static List<Store> GetLibrary(List<User> users, string username)
+        public static void GetLibrary(List<User> users, string username, ListView listView)
         {
             if (!Validations.ValidateUsername(users, username))
             {
                 MessageBox.Show("User not found");
-                return null;
+                return;
             }
-            return users.Find(x => x.Username == username).Library;
+            UpdateGamesList(users, username, listView);
         }
-        public static List<string> GetFriendsList(List<User> users, string username)
+        public static void GetFriendsList(List<User> users, string username, ListView listView)
         {
             if (!Validations.ValidateUsername(users, username))
             {
                 MessageBox.Show("User not found");
-                return null;
+                return;
             }
-            return users.Find(x => x.Username == username).Friends;
+            UpdateListFriends(users, username, listView);
+
+
         }
         public static void DeleteFriend(List<User> users, string username, string friend)
         {
@@ -110,9 +112,6 @@ namespace Projeto
         }
         public static void AddGame(List<User> users, string username, List<Store> store, string game)
         {
-            if (!Validations.ValidateHasGame(users, username, store, game))
-                return; 
-            
             var auxGame = store.Find(x => x.GameName.ToLower() == game.ToLower());
             users.Find(x => x.Username == username).Library.Add(auxGame);
         }
@@ -180,6 +179,31 @@ namespace Projeto
                 return;
             }
             users.Find(x => x.Username == username).Wallet += Convert.ToDouble(amount);
+
+        }
+        public static void UpdateListFriends(List<User> users, string username, ListView listView)
+        {
+            listView.Items.Clear();
+            var result = users.Find(x => x.Username == username).Friends;
+
+            foreach (var item in result)
+            {
+                string[] row = { item, users.Find(x => x.Username == item).ExibitionName };
+                var ltvTemp = new ListViewItem(row);
+                listView.Items.Add(ltvTemp);
+            }
+        }
+        public static void UpdateGamesList(List<User> users, string username, ListView listView)
+        {
+            listView.Items.Clear();
+            var result = users.Find(x => x.Username == username).Library;
+            
+            foreach (var item in result)
+            {
+                string[] row = { item.GameName, item.Genre, item.Publisher };
+                var ltvTemp = new ListViewItem(row);
+                listView.Items.Add(ltvTemp);
+            }
 
         }
     }
