@@ -41,7 +41,8 @@ namespace FrmProjeto
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var form = new FrmClosingWindow();
+            form.Show();
         }
 
         private void btnGoToUsers_Click(object sender, EventArgs e)

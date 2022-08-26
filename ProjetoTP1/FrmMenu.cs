@@ -1,6 +1,6 @@
 using FrmProjeto.Menu;
 using FrmProjeto;
-
+using Projeto;
 
 namespace ProjetoTP1
 {
@@ -30,7 +30,8 @@ namespace ProjetoTP1
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var form = new FrmClosingWindow();
+            form.Show();
         }
 
     private void FrmMenu_Load(object sender, EventArgs e)

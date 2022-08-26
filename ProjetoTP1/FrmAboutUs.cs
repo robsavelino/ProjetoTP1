@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoTP1;
+using Projeto;
 
 namespace FrmProjeto.Menu
 {
@@ -34,7 +35,8 @@ namespace FrmProjeto.Menu
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var form = new FrmClosingWindow();
+            form.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
