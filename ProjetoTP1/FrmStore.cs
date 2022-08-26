@@ -71,7 +71,8 @@ namespace Projeto
             var game = Store.Find(x => x.GameName == gameInput);
             Store.Remove(game);
             MessageBox.Show($"The game {game.GameName} was removed from the store.");
-
         }
+
+
     }
 }
