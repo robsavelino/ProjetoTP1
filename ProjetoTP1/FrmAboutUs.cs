@@ -21,6 +21,7 @@ namespace FrmProjeto.Menu
         private void FrmAboutUs_Load(object sender, EventArgs e)
         {
             lbl_PT.Hide();
+            lbl_CopyRightPT.Hide();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -44,13 +45,17 @@ namespace FrmProjeto.Menu
         private void btn_PT_Click(object sender, EventArgs e)
         {
             lbl_EN.Hide();
+            lbl_CopyRightEN.Hide();
             lbl_PT.Show();
+            lbl_CopyRightPT.Show();
         }
 
         private void btn_EN_Click(object sender, EventArgs e)
         {
             lbl_PT.Hide();
+            lbl_CopyRightPT.Hide();
             lbl_EN.Show();
+            lbl_CopyRightEN.Show();
         }
 
         private void lbl_EN_Click(object sender, EventArgs e)

@@ -33,10 +33,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.ptb01 = new System.Windows.Forms.PictureBox();
             this.lbl_PT = new System.Windows.Forms.Label();
-            this.lbl_CopyRight = new System.Windows.Forms.Label();
+            this.lbl_CopyRightPT = new System.Windows.Forms.Label();
             this.lbl_EN = new System.Windows.Forms.Label();
             this.btn_EN = new System.Windows.Forms.Button();
             this.btn_PT = new System.Windows.Forms.Button();
+            this.lbl_CopyRightEN = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptb01)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,15 +89,15 @@
             this.lbl_PT.Text = resources.GetString("lbl_PT.Text");
             this.lbl_PT.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lbl_CopyRight
+            // lbl_CopyRightPT
             // 
-            this.lbl_CopyRight.AutoSize = true;
-            this.lbl_CopyRight.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_CopyRight.Location = new System.Drawing.Point(268, 488);
-            this.lbl_CopyRight.Name = "lbl_CopyRight";
-            this.lbl_CopyRight.Size = new System.Drawing.Size(223, 15);
-            this.lbl_CopyRight.TabIndex = 4;
-            this.lbl_CopyRight.Text = "Todos os direitos reservados © Let\'s Play ";
+            this.lbl_CopyRightPT.AutoSize = true;
+            this.lbl_CopyRightPT.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_CopyRightPT.Location = new System.Drawing.Point(268, 488);
+            this.lbl_CopyRightPT.Name = "lbl_CopyRightPT";
+            this.lbl_CopyRightPT.Size = new System.Drawing.Size(223, 15);
+            this.lbl_CopyRightPT.TabIndex = 4;
+            this.lbl_CopyRightPT.Text = "Todos os direitos reservados © Let\'s Play ";
             // 
             // lbl_EN
             // 
@@ -136,16 +137,27 @@
             this.btn_PT.UseVisualStyleBackColor = false;
             this.btn_PT.Click += new System.EventHandler(this.btn_PT_Click);
             // 
+            // lbl_CopyRightEN
+            // 
+            this.lbl_CopyRightEN.AutoSize = true;
+            this.lbl_CopyRightEN.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_CopyRightEN.Location = new System.Drawing.Point(268, 488);
+            this.lbl_CopyRightEN.Name = "lbl_CopyRightEN";
+            this.lbl_CopyRightEN.Size = new System.Drawing.Size(170, 15);
+            this.lbl_CopyRightEN.TabIndex = 8;
+            this.lbl_CopyRightEN.Text = "All rights reserved © Let\'s Play ";
+            // 
             // FrmAboutUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(824, 515);
+            this.Controls.Add(this.lbl_CopyRightEN);
             this.Controls.Add(this.btn_PT);
             this.Controls.Add(this.btn_EN);
             this.Controls.Add(this.lbl_EN);
-            this.Controls.Add(this.lbl_CopyRight);
+            this.Controls.Add(this.lbl_CopyRightPT);
             this.Controls.Add(this.lbl_PT);
             this.Controls.Add(this.ptb01);
             this.Controls.Add(this.btnClose);
@@ -166,9 +178,10 @@
         private Button btnClose;
         private PictureBox ptb01;
         private Label lbl_PT;
-        private Label lbl_CopyRight;
+        private Label lbl_CopyRightPT;
         private Label lbl_EN;
         private Button btn_EN;
         private Button btn_PT;
+        private Label lbl_CopyRightEN;
     }
 }
