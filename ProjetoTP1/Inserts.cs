@@ -87,7 +87,7 @@ namespace Projeto
             Store.Add(new Store(4, "Northgard", "57.99", "Strategy", "Shiro Games"));
             Store.Add(new Store(5, "Digimon Survive", "299,90", "Strategy", "Bandai Namco"));
             Store.Add(new Store(6, "Day Z", "119,99", "Survival", "Bohemia Interactive"));
-            Store.Add(new Store(7, "Fifa 23", "299.00", "Sports", "Eletronic Arts"));
+            Store.Add(new Store(7, "Fifa 23", "299,00", "Sports", "Eletronic Arts"));
             Store.Add(new Store(8, "Euro Truck Simulator 2", "49,99", "Simulator", "SCS Software"));
             Store.Add(new Store(9, "The Forest", "37,99", "Survival", "Endnight Games Ltd"));
             Store.Add(new Store(10, "Among Us", "10,89", "Casual", "Innersloth"));

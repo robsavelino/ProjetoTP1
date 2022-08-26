@@ -38,6 +38,7 @@
             this.gamePrice = new System.Windows.Forms.ColumnHeader();
             this.gameGenre = new System.Windows.Forms.ColumnHeader();
             this.gamePublisher = new System.Windows.Forms.ColumnHeader();
+            this.txbGameInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -62,16 +63,17 @@
             // 
             // btnSearchGameInStore
             // 
-            this.btnSearchGameInStore.Location = new System.Drawing.Point(18, 147);
+            this.btnSearchGameInStore.Location = new System.Drawing.Point(179, 46);
             this.btnSearchGameInStore.Name = "btnSearchGameInStore";
-            this.btnSearchGameInStore.Size = new System.Drawing.Size(113, 50);
+            this.btnSearchGameInStore.Size = new System.Drawing.Size(111, 23);
             this.btnSearchGameInStore.TabIndex = 2;
             this.btnSearchGameInStore.Text = "Pesquisar Jogo";
             this.btnSearchGameInStore.UseVisualStyleBackColor = true;
+            this.btnSearchGameInStore.Click += new System.EventHandler(this.btnSearchGameInStore_Click);
             // 
             // btnAddGameToStore
             // 
-            this.btnAddGameToStore.Location = new System.Drawing.Point(18, 221);
+            this.btnAddGameToStore.Location = new System.Drawing.Point(18, 144);
             this.btnAddGameToStore.Name = "btnAddGameToStore";
             this.btnAddGameToStore.Size = new System.Drawing.Size(113, 50);
             this.btnAddGameToStore.TabIndex = 3;
@@ -80,12 +82,13 @@
             // 
             // btnRemoveGameFromStore
             // 
-            this.btnRemoveGameFromStore.Location = new System.Drawing.Point(18, 298);
+            this.btnRemoveGameFromStore.Location = new System.Drawing.Point(523, 46);
             this.btnRemoveGameFromStore.Name = "btnRemoveGameFromStore";
-            this.btnRemoveGameFromStore.Size = new System.Drawing.Size(113, 50);
+            this.btnRemoveGameFromStore.Size = new System.Drawing.Size(135, 23);
             this.btnRemoveGameFromStore.TabIndex = 4;
             this.btnRemoveGameFromStore.Text = "Remover Jogo da Loja";
             this.btnRemoveGameFromStore.UseVisualStyleBackColor = true;
+            this.btnRemoveGameFromStore.Click += new System.EventHandler(this.btnRemoveGameFromStore_Click);
             // 
             // lsvStoreFull
             // 
@@ -94,9 +97,9 @@
             this.gamePrice,
             this.gameGenre,
             this.gamePublisher});
-            this.lsvStoreFull.Location = new System.Drawing.Point(217, 75);
+            this.lsvStoreFull.Location = new System.Drawing.Point(179, 75);
             this.lsvStoreFull.Name = "lsvStoreFull";
-            this.lsvStoreFull.Size = new System.Drawing.Size(348, 273);
+            this.lsvStoreFull.Size = new System.Drawing.Size(479, 273);
             this.lsvStoreFull.TabIndex = 5;
             this.lsvStoreFull.UseCompatibleStateImageBehavior = false;
             this.lsvStoreFull.View = System.Windows.Forms.View.Details;
@@ -104,7 +107,7 @@
             // gameName
             // 
             this.gameName.Text = "Name";
-            this.gameName.Width = 120;
+            this.gameName.Width = 200;
             // 
             // gamePrice
             // 
@@ -117,7 +120,14 @@
             // gamePublisher
             // 
             this.gamePublisher.Text = "Empresa";
-            this.gamePublisher.Width = 100;
+            this.gamePublisher.Width = 150;
+            // 
+            // txbGameInput
+            // 
+            this.txbGameInput.Location = new System.Drawing.Point(296, 46);
+            this.txbGameInput.Name = "txbGameInput";
+            this.txbGameInput.Size = new System.Drawing.Size(221, 23);
+            this.txbGameInput.TabIndex = 6;
             // 
             // FrmStore
             // 
@@ -125,6 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(686, 450);
+            this.Controls.Add(this.txbGameInput);
             this.Controls.Add(this.lsvStoreFull);
             this.Controls.Add(this.btnRemoveGameFromStore);
             this.Controls.Add(this.btnAddGameToStore);
@@ -151,5 +162,6 @@
         private ColumnHeader gamePrice;
         private ColumnHeader gameGenre;
         private ColumnHeader gamePublisher;
+        private TextBox txbGameInput;
     }
 }

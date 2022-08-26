@@ -24,6 +24,7 @@ namespace Projeto
 
         private void btnOpenStore_Click(object sender, EventArgs e)
         {
+            lsvStoreFull.Items.Clear();
             foreach (var item in Store)
             {
                 string[] row = { item.GameName, item.Price.ToString(), item.Genre, item.Publisher };
@@ -34,6 +35,42 @@ namespace Projeto
 
         private void FrmStore_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnSearchGameInStore_Click(object sender, EventArgs e)
+        {
+            lsvStoreFull.Items.Clear();
+            var gameInput = txbGameInput.Text;
+
+            if(!Validations.ValidateGame(Store ,gameInput))
+            {
+                MessageBox.Show("Game not found.");
+                txbGameInput.Clear();
+                txbGameInput.Focus();
+                return;
+            }
+
+            var game = Store.Find(x=> x.GameName == gameInput);
+            string[] row = { game.GameName, game.Price.ToString(), game.Genre, game.Publisher };
+            var ltsTemp = new ListViewItem(row);
+            lsvStoreFull.Items.Add(ltsTemp);
+            txbGameInput.Clear();
+        }
+
+        private void btnRemoveGameFromStore_Click(object sender, EventArgs e)
+        {
+            var gameInput = txbGameInput.Text;
+            if (!Validations.ValidateGame(Store, gameInput))
+            {
+                MessageBox.Show("Game not found.");
+                txbGameInput.Clear();
+                txbGameInput.Focus();
+                return;
+            }
+            var game = Store.Find(x => x.GameName == gameInput);
+            Store.Remove(game);
+            MessageBox.Show($"The game {game.GameName} was removed from the store.");
 
         }
     }
