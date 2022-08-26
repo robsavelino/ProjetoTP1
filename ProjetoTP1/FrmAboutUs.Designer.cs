@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAboutUs));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.ptb01 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb01)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -52,17 +55,29 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // ptb01
+            // 
+            this.ptb01.Image = ((System.Drawing.Image)(resources.GetObject("ptb01.Image")));
+            this.ptb01.Location = new System.Drawing.Point(309, 48);
+            this.ptb01.Name = "ptb01";
+            this.ptb01.Size = new System.Drawing.Size(132, 122);
+            this.ptb01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb01.TabIndex = 2;
+            this.ptb01.TabStop = false;
+            // 
             // FrmAboutUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ptb01);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnReturn);
             this.Name = "FrmAboutUs";
             this.Text = "Sobre";
             this.Load += new System.EventHandler(this.FrmAboutUs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb01)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -71,5 +86,6 @@
 
         private Button btnReturn;
         private Button btnClose;
+        private PictureBox ptb01;
     }
 }

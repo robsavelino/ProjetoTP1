@@ -45,7 +45,9 @@
             this.listView2 = new System.Windows.Forms.ListView();
             this.clmUsername = new System.Windows.Forms.ColumnHeader();
             this.clmExibitionName = new System.Windows.Forms.ColumnHeader();
+            this.ptb02 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb02)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGames
@@ -186,12 +188,23 @@
             this.clmExibitionName.Text = "Exibition Name";
             this.clmExibitionName.Width = 200;
             // 
+            // ptb02
+            // 
+            this.ptb02.Image = ((System.Drawing.Image)(resources.GetObject("ptb02.Image")));
+            this.ptb02.Location = new System.Drawing.Point(1039, 448);
+            this.ptb02.Name = "ptb02";
+            this.ptb02.Size = new System.Drawing.Size(175, 173);
+            this.ptb02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb02.TabIndex = 12;
+            this.ptb02.TabStop = false;
+            // 
             // FrmUserScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1238, 642);
+            this.Controls.Add(this.ptb02);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txbInput);
@@ -207,6 +220,7 @@
             this.Text = "FrmUserScreen";
             this.Load += new System.EventHandler(this.FrmUserScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb02)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +246,6 @@
         private ListView listView2;
         private ColumnHeader clmUsername;
         private ColumnHeader clmExibitionName;
+        private PictureBox ptb02;
     }
 }
